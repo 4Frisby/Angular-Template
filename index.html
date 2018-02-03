@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+
+  <head>
+    <link data-require="bootstrap@*" data-semver="3.3.0" rel="stylesheet" href="css-lib/bootstrap.min.css" />
+    <link data-require="angular-loading-bar@0.9.0" data-semver="0.7.1" rel="stylesheet" href="css-lib/loading-bar.min.css" />
+    <link rel="stylesheet" href="css-lib/angular-toastr.css">
+     <link data-require="font-awesome@4.7.0" data-semver="4.7.0" rel="stylesheet" href="css-lib/font-awesome.min.css" />
+  
+    <script data-require="jquery@2.0.2" data-semver="2.0.2" src="js-lib/jquery-2.0.2.min.js"></script>
+    <script data-require="bootstrap@*" data-semver="3.3.0" src="js-lib/bootstrap.min.js"></script>
+    <script data-require="angular.js@1.4.3" data-semver="1.6.0" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.js"></script>
+    <script data-require="angular-sanitize@*" data-semver="1.4.3" src="js-lib/angular-sanitize.js"></script>
+    <script data-require="angular-animate@*" data-semver="1.4.3" src="js-lib/angular-animate.js"></script>
+    <script src="js-lib/angular-toastr.tpls.js"></script>
+    <script data-require="angular-loading-bar@0.9.0" data-semver="0.7.1" src="js-lib/loading-bar.min.js"></script>
+    <script type="text/javascript" src="js-lib/bootbox.min.js"></script>
+    <script data-require="angular-touch@1.6.*" data-semver="1.6.2" src="js-lib/angular-touch.js"></script>
+    <script data-require="ui-bootstrap@2.5.0" data-semver="2.5.0" src="js-lib/ui-bootstrap-tpls-2.5.0.js"></script>
+    <script defer src="js-lib/font-awesome-all-5-0-6.js"></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js"></script>
+
+
+<!-- or -->
+
+
+  </head>
+
+  <body ng-controller="myCTRL">
+    <h1>Hello Plunker!</h1>
+
+
+    <h4>Single toggle</h4>
+    <pre>{{singleModel}}</pre>
+    <button type="button" class="btn btn-primary" ng-model="singleModel" uib-btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">
+        Single Toggle
+    </button>
+    <h4>Checkbox</h4>
+    <pre>Model: {{checkModel}}</pre>
+    <pre>Results: {{checkResults}}</pre>
+    <div class="btn-group">
+        <label class="btn btn-primary" ng-model="checkModel.left" uib-btn-checkbox>Left</label>
+        <label class="btn btn-primary" ng-model="checkModel.middle" uib-btn-checkbox>Middle</label>
+        <label class="btn btn-primary" ng-model="checkModel.right" uib-btn-checkbox>Right</label>
+    </div>
+    <h4>Radio &amp; Uncheckable Radio</h4>
+    <pre>{{radioModel || 'null'}}</pre>
+    <div class="btn-group">
+        <label class="btn btn-primary" ng-model="radioModel" uib-btn-radio="'Left'">Left</label>
+        <label class="btn btn-primary" ng-model="radioModel" uib-btn-radio="'Middle'">Middle</label>
+        <label class="btn btn-primary" ng-model="radioModel" uib-btn-radio="'Right'">Right</label>
+    </div>
+    <div class="btn-group">
+        <label class="btn btn-success" ng-model="radioModel" uib-btn-radio="'Left'" uncheckable>Left</label>
+        <label class="btn btn-success" ng-model="radioModel" uib-btn-radio="'Middle'" uncheckable>Middle</label>
+        <label class="btn btn-success" ng-model="radioModel" uib-btn-radio="'Right'" uib-uncheckable="uncheckable">Right</label>
+    </div>
+    <div>
+        <button class="btn btn-default" ng-click="uncheckable = !uncheckable">
+            Toggle uncheckable
+        </button>
+    </div>
+
+
+<div class="fa-3x">
+  <i class="fas fa-spinner fa-spin"></i>
+  <i class="fas fa-circle-notch fa-spin"></i>
+  <i class="fas fa-sync fa-spin"></i>
+  <i class="fas fa-cog fa-spin"></i>
+  <i class="fas fa-spinner fa-pulse"></i>
+</div>
+
+
+<form class="form">
+<div class="col-xs-12" align="center"> 
+     
+        <button class="btn btn-primary" ng-click="testToast()">aaa</button>
+</div>
+    
+</form>
+    
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  </body>
+
+</html>
